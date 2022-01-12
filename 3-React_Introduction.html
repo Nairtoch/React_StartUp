@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>React</title>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const food = (
+            <table>
+                <tr>
+                    <th>Nat's Favorite Food</th>
+                </tr>
+                <tr>
+                    <td>Hotwings.</td>
+                </tr>
+                <tr>
+                    <td>Fried eggs with cheddar and bacon on toasted bread.</td>
+                </tr>
+                <tr>
+                    <td>"Potato Lasanga" - or "flødekartofler".</td>
+                </tr>
+                <tr>
+                    <td>Fries and literally anything meat dish to accompany it.</td>
+                </tr>
+                <tr>
+                    <td>Nadias Sandwich with marinated chicken and bacon, no tomatoes.</td>
+                </tr>
+            </table>
+        );
+
+        // Her skal du indsætte din react kode
+        ReactDOM.render(
+            food,
+            document.getElementById('root')
+        );
+    </script>
+</body>
+</html>
