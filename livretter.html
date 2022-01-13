@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Nat's Favorite Dishes</title>
+  </head>
+  <body>
+
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const Dishes = [
+            'Hotwings',
+            'Fried eggs with cheddar and bacon on toasted bread.',
+            '"Potato Lasanga" - or "flødekartofler".',
+            'Fries and literally anything meat dish to accompany it.',
+            'Nadias Sandwich with marinated chicken and bacon, no tomatoes.'
+        ]
+
+        const ShowDish = (props) => {
+            console.log(props);
+            return (
+                <ul>
+                    {props.data.map((item, key) => {
+                        return (
+                            <Dish key={key} name={item} />
+                        )
+                    })}
+                </ul>
+            )
+        }
+
+        const Dish = (props) => {
+            return <li>{props.name}</li>
+        }
+
+        // Her skal du indsætte din react kode
+        ReactDOM.render(
+            <ShowDish data={Dishes} />,
+            document.getElementById('root')
+        )
+    </script>
+
+  </body>
+</html>
